@@ -1,0 +1,1 @@
+export 'package:kp_admin/src/system_configuration/manage_roles/models/manage_role_model.dart';

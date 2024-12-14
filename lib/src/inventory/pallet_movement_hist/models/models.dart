@@ -1,0 +1,1 @@
+export 'pallet_movement_hist_model.dart';

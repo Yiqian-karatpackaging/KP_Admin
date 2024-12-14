@@ -1,0 +1,1 @@
+export 'partial_pallet_list_column.dart';

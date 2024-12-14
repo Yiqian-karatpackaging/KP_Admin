@@ -1,0 +1,1 @@
+export 'sales_sample_history_model.dart';

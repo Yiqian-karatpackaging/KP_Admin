@@ -1,0 +1,1 @@
+export 'cross_inventory_lookup_model.dart';

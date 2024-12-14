@@ -1,0 +1,1 @@
+export 'bin_snapshot_model.dart';

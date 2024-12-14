@@ -1,0 +1,1 @@
+export 'inventory_movement_model.dart';

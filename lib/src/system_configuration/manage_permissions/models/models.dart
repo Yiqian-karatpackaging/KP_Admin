@@ -1,0 +1,2 @@
+export 'package:kp_admin/src/system_configuration/manage_permissions/models/manage_permissions_model.dart';
+export 'package:kp_admin/src/system_configuration/manage_permissions/models/role_user_model.dart';

@@ -1,0 +1,1 @@
+export 'pallet_quantity_model.dart';

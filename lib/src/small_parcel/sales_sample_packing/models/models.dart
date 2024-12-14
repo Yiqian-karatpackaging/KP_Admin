@@ -1,0 +1,1 @@
+export 'sales_sample_packing_model.dart';

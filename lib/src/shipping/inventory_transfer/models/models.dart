@@ -1,0 +1,1 @@
+export 'inventory_transfer_model.dart';

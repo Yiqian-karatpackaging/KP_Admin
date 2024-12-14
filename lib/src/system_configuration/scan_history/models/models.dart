@@ -1,0 +1,2 @@
+export 'package:kp_admin/src/system_configuration/scan_history/models/scan_history_model.dart';
+export 'package:kp_admin/src/system_configuration/scan_history/models/scan_history_expansion_model.dart';
