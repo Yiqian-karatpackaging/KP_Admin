@@ -1,1 +1,1 @@
-// export 'package:kp_admin/src/system_configuration/manage_users/models/';
+export 'bpn_movement_model.dart';

@@ -1,1 +1,1 @@
-// export 'package:kp_admin/src/system_configuration/manage_users/models/';
+export 'bulk_pallet_movement_model.dart';

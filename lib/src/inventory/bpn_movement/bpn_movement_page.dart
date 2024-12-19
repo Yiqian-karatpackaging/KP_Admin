@@ -12,6 +12,15 @@ class BPNMovementPage extends StatefulWidget {
 
 class _CreateState extends State<BPNMovementPage> {
 
+  final _filterData = [
+    {'id': '', 'title': 'BPN:', 'type': 'text', 'value': ''},
+  ];
+
+  final _menuButtonData = [
+    {'id': 'search', 'title': 'Search'},
+    {'id': 'move', 'title': 'Move'},
+  ];
+
   @override
   void initState() {
     // TODO: implement initState
@@ -24,12 +33,51 @@ class _CreateState extends State<BPNMovementPage> {
     super.dispose();
   }
 
+  Future<(List<BPNMovementModel>, bool)> _getData() async {
+    List<BPNMovementModel> _orderData = [];
+    try {
+      BPNMovementColumn.data.forEach((element) {
+        final data = BPNMovementModel.fromJson(element);
+        _orderData.add(data);
+      });
+      return (_orderData, false);
+    } catch (e) {
+      return (_orderData, false);
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return CustomScaffold(
       route: '/bpn_movement',
       title: 'Inventory / BPN Movement',
-      body: BaseText(text: 'bpn_movement'),
+      body: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          TableHeadWidget(
+            menuButtonData: _menuButtonData,
+            filterData: _filterData,
+            callBack: (value) {},
+          ),
+          SizedBox(
+            height: usableHeight(context),
+            child: OperanceDataTable<BPNMovementModel>(
+              showRowsPerPageOptions: false,
+              selectable: true,
+              columns: BPNMovementColumn.columns,
+              emptyStateBuilder: (BuildContext context) => EmptyWidget(),
+              onFetch: (limit, sort, {bool isInitial = true}) async {
+                return _getData();
+              },
+              loadingStateBuilder: (BuildContext context) {
+                return const Center(
+                  child: CircularProgressIndicator(),
+                );
+              },
+            ),
+          ),
+        ],
+      ),
     );
   }
 }

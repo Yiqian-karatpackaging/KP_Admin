@@ -1,13 +1,23 @@
 import 'package:kp_admin/src/common/pdf_page.dart';
 import 'package:kp_admin/src/common/scan_page.dart';
 import 'package:kp_admin/src/dashboard/dashboard_page.dart';
+import 'package:kp_admin/src/deleted_history/deleted_history.dart';
 import 'package:kp_admin/src/inventory/cycle_count_list/cycle_count_list_page.dart';
 import 'package:kp_admin/src/login/login_page.dart';
+import 'package:kp_admin/src/manufacturing/manufacturing.dart';
+import 'package:kp_admin/src/receiving/receiving.dart';
 import 'package:kp_admin/src/shipping/shipping.dart';
 import 'package:kp_admin/src/shipping/update_shipped_status/update_shipped_status.dart';
 import 'package:kp_admin/src/system_configuration/system_configuration.dart';
 import 'package:kp_admin/src/small_parcel/small_parcel.dart';
 import 'package:kp_admin/src/inventory/inventory.dart';
+import 'package:kp_admin/src/outbound/outbound.dart';
+import 'package:kp_admin/src/support_docs/support_docs.dart';
+import 'package:kp_admin/src/purchasing/purchasing.dart';
+import 'package:kp_admin/src/sales/sales.dart';
+import 'package:kp_admin/src/returns/returns.dart';
+import 'package:kp_admin/src/system_review/system_review.dart';
+import 'package:kp_admin/src/will_call_schedule/will_call_schedule.dart';
 
 class Pages {
   static Widget? getPageWidget(RouteSettings settings) {
@@ -26,6 +36,7 @@ class Pages {
         //   return const LoginPage();
         // case '/dashboard':
         return const DashboardPage();
+
 
       /// SystemConfiguration ⬇
       case '/manage_users':
@@ -103,6 +114,149 @@ class Pages {
 
       /// SystemConfiguration ⬆
 
+      /// Support Docs ⬇
+      case '/po_support_doc':
+        return POSupportDocPage();
+      case '/so_support_doc':
+        return SOSupportDocPage();
+      case '/scan_doc':
+        return ScanDocPage();
+      case '/so_box_doc':
+        return SOBoxDocPage();
+      case '/to_support_doc':
+        return ToSupportDocPage();
+      case '/deleted_history':
+        return DeletedHistoryPage();
+      /// Support Docs ⬆
+
+      /// Purchasing ⬇
+      case '/purchase_order':
+        return PurchaseOrderPage();
+      case '/po_request':
+        return PORequestPage();
+      case '/po_request_approval':
+        return PORequestApprovalPage();
+      case '/po_received':
+        return POReceivedPage();
+      case '/ns_transfer_order':
+        return NSTransferOrderPage();
+      case '/to_received':
+        return TOReceivedPage();
+        case '/internal_usage_request':
+      return InternalUsageRequestPage();
+      case '/sales_order_shortage_review':
+        return SalesOrderShortageReviewPage();
+      /// Purchasing ⬆
+
+      /// Manufacturing ⬇
+      case '/work_order_queue':
+        return const WorkOrderQueuePage();
+      case '/incoming_containers':
+        return const IncomingContainersPage();
+      case '/manufacturing_po_received':
+        return const ManufacturingPoReceivedPage();
+      case '/manufacturing_receive':
+        return const ManufacturingReceivePage();
+      case '/raw_material_movement':
+        return const RawMaterialMovementPage();
+      case '/assembly_build_history':
+        return const AssemblyBuildHistoryPage();
+      case '/plastic_extrusion':
+        return const PlasticExtrusionPage();
+      case '/plastic_thermoforming':
+        return const PlasticThermoformingPage();
+      case '/paper_slitting':
+        return const PaperSlittingPage();
+      case '/manu_completed_containers':
+        return const ManuCompletedContainersPage();
+      case '/manu_yard_management':
+        return const ManuYardManagementPage();
+      case '/plastic_recycle':
+        return const PlasticRecyclePage();
+      case '/plastic_print':
+        return const PlasticPrintPage();
+      case '/paper_printing':
+        return const PaperPrintingPage();
+      case '/paper_punching':
+        return const PaperPunchingPage();
+      case '/paper_forming':
+        return const PaperFormingPage();
+      case '/manufacturing_audit':
+        return const ManufacturingAuditPage();
+      case '/plastic_pre_recycle':
+        return const PlasticPreRecyclePage();
+      case '/manufacturing_to_receive':
+        return const ManufacturingToReceivePage();
+      case '/qc_hold_review':
+        return const QCHoldReviewPage();
+      case '/qc_plate_number':
+        return const QCPlateNumberPage();
+      case '/qc_items':
+        return const QCItemsPage();
+      case '/qpn_release':
+        return const QPNReleasePage();
+      case '/qpn_release_items':
+        return const QPNReleaseItemsPage();
+      case '/plastic_thermoforming_inline':
+        return const PlasticThermoformingInlinePage();
+      case '/plastic_recycle_history':
+        return const PlasticRecycleHistoryPage();
+      case '/plastic_pre_recycle_history':
+        return const PlasticPreRecycleHistoryPage();
+      /// Manufacturing ⬆
+
+      /// Sales ⬇
+      case '/shipping_quote':
+        return const ShippingQuotePage();
+      case '/so_cubic_feet':
+        return const SOCubicFeetPage();
+      case '/ups_quote_item_only':
+        return const UPSQuoteItemOnlyPage();
+      case '/blue_ship_quote':
+        return const BlueShipQuotePage();
+      case '/freight_view_quote':
+        return const FreightViewQuotePage();
+      case '/freight_view_history':
+        return const FreightViewHistoryPage();
+      case '/freight_view_bol':
+        return const FreightViewBolPage();
+      case '/rack_queue':
+        return const RackQueuePage();
+      /// Sales ⬆
+
+      /// Receiving ⬇
+      case '/receiving_incoming_containers':
+        return const ReceivingIncomingContainersPage();
+      case '/yard_managment':
+        return const YardManagmentPage();
+      case '/completed_containers':
+        return const CompletedContainersPage();
+      case '/receive_scan':
+        return const ReceiveScanPage();
+      case '/place_holder_pallet':
+        return const PlaceHolderPalletPage();
+      case '/receive_pallet_movement':
+        return const ReceivePalletMovementPage();
+      case '/place_holder_list':
+        return const PlaceHolderListPage();
+      case '/container_inventory':
+        return const ContainerInventoryPage();
+      case '/yard_containers':
+        return const YardContainersPage();
+      case '/to_queue':
+        return const TOQueuePage();
+      case '/to_containers':
+        return const TOContainersPage();
+      case '/to_yard_management':
+        return const ToYardManagementPage();
+      case '/to_completed_containers':
+        return const ToCompletedContainersPage();
+      case '/transfer_inventory':
+        return const TransferInventoryPage();
+      case '/to_receive_scan':
+        return const ToReceiveScanPage();
+      /// Receiving ⬆
+
       /// shipping ⬇
       case '/queue_page':
         return QueuePage();
@@ -155,7 +309,46 @@ class Pages {
 
       /// shipping ⬆
 
-      /// SmallParcel ⬇
+      /// Outbound ⬇
+      case '/dispatch':
+        return DispatchPage();
+      case '/order_schedule':
+        return OrderSchedulePage();
+      case '/dispatch_commit':
+        return DispatchCommitPage();
+      case '/invoice_signature':
+        return InvoiceSignaturePage();
+      case '/manifest':
+        return ManifestPage();
+      case '/3pl_driver_sign_out':
+        return DriverSignOutPage();
+      case '/manifest_history':
+        return ManifestHistoryPage();
+      case '/driver_sign_in':
+        return DriverSignInPage();
+      case '/3p_pickup_queue':
+        return PickupQueuePage();
+      case '/3p_pickup_schedul':
+        return PickupSchedulPage();
+      case '/do_dispatch':
+        return DoDispatchPage();
+      case '/do_manifest_history':
+        return DoManifestHistoryPage();
+      case '/delivery_orders':
+        return DeliveryOrdersPage();
+      case '/route_prep':
+        return RoutePrepPage();
+      case '/driver_routes':
+        return DriverRoutesPage();
+      case '/drivers_mileage':
+        return DriversMileagePage();
+      case '/manifest_history_v2':
+        return ManifestHistoryV2Page();
+      case '/vehicle_utilization':
+        return VehicleUtilizationPage();
+      /// Outbound ⬆
+
+      /// Small Parcel ⬇
       case '/sp_bulk_pick':
         return SPBulkPickPage();
       case '/sp_bp_history':
@@ -199,7 +392,7 @@ class Pages {
       case '/sp_packing':
         return SPPackingPage();
 
-      /// SmallParcel ⬆
+      /// Small Parcel ⬆
 
       /// Inventory ⬇
       case '/bin_count':
@@ -286,6 +479,134 @@ class Pages {
         return InventoryCountProgressDashboardPage();
 
       /// Inventory ⬆
+
+      /// Returns ⬇
+      case '/return_authorizations':
+        return const ReturnAuthorizationsPage();
+      case '/ra_receive':
+        return const RaReceivePage();
+      case '/ra_completed':
+        return const RaCompletedPage();
+      case '/damaged_plate_number':
+        return const DamagedPlateNumberPage();
+      case '/expired_items':
+        return const ExpiredItemsPage();
+      case '/damage_items':
+        return const DamageItemsPage();
+      case '/ns_damage_item_review':
+        return const NsDamageItemReviewPage();
+      case '/dpn_movement':
+        return const DpnMovementPage();
+      case '/ra_return_label':
+        return const RaReturnLabelPage();
+      case '/unknown_returns':
+        return const UnknownReturnsPage();
+      case '/repackage':
+        return const RepackagePage();
+      case '/repacked_item':
+        return const RepackedItemPage();
+      case '/dpn_transfer':
+        return const DpnTransferPage();
+      case '/put_away_id':
+        return const PutAwayIdPage();
+      case '/put_away':
+        return const PutAwayPage();
+      case '/put_away_history':
+        return const PutAwayHistoryPage();
+      /// Returns ⬆
+
+      /// System Review ⬇
+      case '/user_pick_history':
+        return const UserPickHistoryPage();
+      case '/picker_kpi_report':
+        return const PickerKpiReportPage();
+      case '/wh_bin_discrepancy':
+        return const WhBinDiscrepancyPage();
+      case '/slow_item_review':
+        return const SlowItemReviewPage();
+      case '/id_bin_review':
+        return const IdBinReviewPage();
+      case '/personal_bin_review':
+        return const PersonalBinReviewPage();
+      case '/temporary_bin_review':
+        return const TemporaryBinReviewPage();
+      case '/pick_qty_fulfillment_review':
+        return const PickQtyFulfillmentReviewPage();
+      case '/login_time':
+        return const LoginTimePage();
+      case '/ns_fulfilled_review':
+        return const NsFulfilledReviewPage();
+      case '/audit_complete_error_log':
+        return const AuditCompleteErrorLogPage();
+      case '/hold_history':
+        return const HoldHistoryPage();
+      case '/discontinued_item_review':
+        return const DiscontinuedItemReviewPage();
+      case '/checker_kpi_report':
+        return const CheckerKpiReportPage();
+      case '/receiving_kpi_report':
+        return const ReceivingKpiReportPage();
+      case '/packing_kpi_report':
+        return const PackingKpiReportPage();
+      case '/lpn_expiration_review':
+        return const LpnExpirationReviewPage();
+      case '/item_scan_history':
+        return const ItemScanHistoryPage();
+      case '/system_log':
+        return const SystemLogPage();
+      case '/completed_log':
+        return const CompletedLogPage();
+      case '/bin_review':
+        return const BinReviewPage();
+      case '/ca_inventory_percentage':
+        return const CaInventoryPercentagePage();
+      case '/bin_spec_history':
+        return const BinSpecHistoryPage();
+      case '/replenishment_kpi':
+        return const ReplenishmentKpiPage();
+      case '/velocity_class_history':
+        return const VelocityClassHistoryPage();
+      case '/over_stock_bin_clear_history':
+        return const OverStockBinClearHistoryPage();
+      case '/cycle_count_kpi':
+        return const CycleCountKpiPage();
+      case '/year_end_count_kpi':
+        return const YearEndCountKpiPage();
+      case '/internal_usage_history':
+        return const InternalUsageHistoryPage();
+      case '/rack_team_kpi':
+        return const RackTeamKpiPage();
+      case '/receiving_kpi_report_v2':
+        return const ReceivingKpiReportV2Page();
+      case '/pending_complete_po':
+        return const PendingCompletePoPage();
+      case '/so_pick_cancel_history':
+        return const SoPickCancelHistoryPage();
+      case '/reminder_message_list':
+        return const ReminderMessageListPage();
+      case '/so_duplicate_review':
+        return const SoDuplicateReviewPage();
+      case '/workload_statistics':
+        return const WorkloadStatisticsPage();
+      /// System Review ⬆
+
+      /// Deleted History ⬇
+      case '/pick_audit_deleted':
+        return PickAuditDeletedPage();
+      case '/receive_scan_deleted':
+        return ReceiveScanDeletedPage();
+      case '/sp_packing_deleted':
+        return SpPackingDeletedPage();
+      case '/manufacturing_deleted':
+        return ManufacturingDeletedPage();
+      /// Deleted History ⬆
+
+    /// Deleted History ⬇
+      case '/pre_pull_log':
+        return PrePullLogPage();
+      case '/will_call_duty':
+        return WillCallDutyPage();
+      /// Deleted History ⬆
 
       case '/pdf':
         return PDFPage(arguments['url'] ?? '');
