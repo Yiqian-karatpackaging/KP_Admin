@@ -1,0 +1,1 @@
+export 'receive_pallet_movement_current_bin_model.dart';

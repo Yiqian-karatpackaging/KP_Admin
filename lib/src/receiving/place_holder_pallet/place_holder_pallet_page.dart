@@ -29,7 +29,14 @@ class _CreateState extends State<PlaceHolderPalletPage> {
     return CustomScaffold(
       route: '/place_holder_pallet',
       title: 'Receiving / Place Holder Pallet',
-      body: BaseText(text: 'place_holder_pallet'),
+      body: Padding(padding: EdgeInsets.only(top: 10), child: Row(
+        children: [
+          SearchTextFieldWidget(title: 'PO#:', titleWidth: 20, textWidth: 50,),
+          SearchTextFieldWidget(title: 'Bin:', titleWidth: 20, textWidth: 50,),
+          SizedBox(width: 10),
+          BaseText(text: 'Create Place Holder', bgColor: Colors.blue, textColor: Colors.white, padding: EdgeInsets.symmetric(vertical: 5, horizontal: 10), borderRadius: 2,),
+        ],
+      ),),
     );
   }
 }

@@ -46,6 +46,19 @@ class ReceivingIncomingContainersColumn {
 
   static List<OperanceDataColumn<ReceivingIncomingContainersModel>> columns = [
     OperanceDataColumn<ReceivingIncomingContainersModel>(
+      name: 'Action',
+      width: OperanceDataColumnWidth(size: 20.w),
+      columnHeader: Text(
+        'Action',
+        style: columnHeaderStyle,
+      ),
+      cellBuilder: (context, item) {
+        return Center(
+          child: Icon(Icons.edit, color: Colors.blue,),
+        );
+      },
+    ),
+    OperanceDataColumn<ReceivingIncomingContainersModel>(
       name: 'loc',
       columnHeader: Text(
         'Loc',
