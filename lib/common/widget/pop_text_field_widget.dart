@@ -1,7 +1,6 @@
 export 'dart:convert';
 import 'package:flutter/material.dart';
 export 'package:flutter/services.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:kp_admin/common/widget/widget.dart';
 export 'package:flutter_easyloading/flutter_easyloading.dart';
 

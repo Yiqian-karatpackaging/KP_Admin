@@ -17,10 +17,10 @@ class MenuItems {
       // _supportDocsMenu(),
       // _purchasingMenu(),
       // _manufacturingMenu(),
-      // _salesMenu(),
-      _receivingMenu(),
+      _salesMenu(),
+      // _receivingMenu(),      //ok
       // _shippingMenus(),      //ok
-      // _outboundMenu(),
+      // _outboundMenu(),        //ok
       // _smallParcelMenu(),    //ok
       // _inventoryMenu(),      //ok
       // _returnsMenu(),

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:kp_admin/common/widget/widget.dart';
 import 'package:operance_datatable/operance_datatable.dart';
 

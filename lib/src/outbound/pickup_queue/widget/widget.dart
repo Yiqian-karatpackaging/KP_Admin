@@ -1,1 +1,2 @@
-// export 'package:kp_admin/src/system_configuration/manage_users/columns/';
+export 'pickup_queue_list_widget.dart';
+export 'pickup_queue_photo_widget.dart';

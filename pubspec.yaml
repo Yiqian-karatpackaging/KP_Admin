@@ -59,6 +59,8 @@ dependencies:
   cart_stepper: ^4.3.0
   # 带输入的标签
   textfield_tags: ^3.0.1
+  # 手写签名
+  signature: ^5.5.0
 
 dev_dependencies:
   flutter_test:

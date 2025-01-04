@@ -1,0 +1,1 @@
+export 'pickup_queue_list_model.dart';
