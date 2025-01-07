@@ -1,0 +1,1 @@
+export 'freight_view_history_model.dart';

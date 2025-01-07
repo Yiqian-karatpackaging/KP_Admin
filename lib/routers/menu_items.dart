@@ -17,12 +17,12 @@ class MenuItems {
       // _supportDocsMenu(),
       // _purchasingMenu(),
       // _manufacturingMenu(),
-      _salesMenu(),
-      // _receivingMenu(),      //ok
-      // _shippingMenus(),      //ok
-      // _outboundMenu(),        //ok
-      // _smallParcelMenu(),    //ok
-      // _inventoryMenu(),      //ok
+      _salesMenu(),           //ok
+      _receivingMenu(),      //ok
+      _shippingMenus(),      //ok1
+      _outboundMenu(),        //ok
+      _smallParcelMenu(),    //ok1
+      _inventoryMenu(),      //ok1
       // _returnsMenu(),
       // _systemReviewMenu(),
       // _deletedHistoryMenu(),
@@ -380,6 +380,10 @@ class MenuItems {
           route: '/so_cubic_feet',
         ),
         AdminMenuItem(
+          title: 'UPS Quote',
+          route: '/ups_quote',
+        ),
+        AdminMenuItem(
           title: 'UPS Quote (Item Only)',
           route: '/ups_quote_item_only',
         ),
@@ -406,7 +410,7 @@ class MenuItems {
       ],
     );
   }
-  
+
   static AdminMenuItem _receivingMenu() {
     return const AdminMenuItem(
       title: 'Receiving',

@@ -1,0 +1,1 @@
+export 'ups_quote_item_only_model.dart';

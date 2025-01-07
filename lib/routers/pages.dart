@@ -56,6 +56,7 @@ class Pages {
       case '/user_history':
         return UserHistoryPage();
       case '/net_suite_order_sync':
+      case '/net_suite_order_sync':
         return NetSuiteOrderSyncPage();
       case '/variables':
         return VariablesPage();
@@ -210,6 +211,8 @@ class Pages {
         return const ShippingQuotePage();
       case '/so_cubic_feet':
         return const SOCubicFeetPage();
+      case '/ups_quote':
+        return const UPSQuotePage();
       case '/ups_quote_item_only':
         return const UPSQuoteItemOnlyPage();
       case '/blue_ship_quote':
